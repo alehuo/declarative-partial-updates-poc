@@ -1,0 +1,29 @@
+{
+  "name": "declarative-partial-updates-poc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "TODO app PoC streaming <template for> patches (WICG Declarative Partial Updates) from Express",
+  "scripts": {
+    "build:css": "tailwindcss -i src/input.css -o public/app.css --minify",
+    "typecheck": "tsc",
+    "start": "npm run build:css && node server.ts",
+    "dev": "npm run build:css && (tailwindcss -i src/input.css -o public/app.css --watch & node --watch server.ts)"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^5.3.0",
+    "handlebars": "^4.7.10"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.10",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^7.0.2"
+  }
+}

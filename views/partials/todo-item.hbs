@@ -1,0 +1,10 @@
+<li class="group flex items-center gap-3 px-4 py-3">
+  <span class="flex-1 break-words">{{title}}</span>
+  <form method="post" action="/todos/{{id}}/delete">
+    <input type="hidden" name="_csrf" value="{{csrf}}">
+    <button aria-label="Delete “{{title}}”"
+      class="rounded-md px-2 py-1 text-sm text-slate-400 opacity-0 group-hover:opacity-100 hover:bg-rose-50 hover:text-rose-600 focus-visible:opacity-100 aria-busy:opacity-50">
+      Delete
+    </button>
+  </form>
+</li>
